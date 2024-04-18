@@ -8,7 +8,7 @@ const generateToken = (res, userId) => {
   res
   .cookie("token", token, {
 	httpOnly: true,
-	sameSite: "none",
+	sameSite: "strict",
 	secure: true,
 	path: "/",
 	// domain: 'blogging-production-7db1.up.railway.app'
