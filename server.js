@@ -6,8 +6,9 @@ const app = express();
 app.use(bodyParser.json());
 // Parse URL-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
-require('dotenv').config();
+require('dotenv').config(); 
 app.use(cors({origin:'http://localhost:3000',credentials:true}));
+//  app.use(cors())
 const dbConfig= require('./config/dbconfig')
 const userRoute=require("./routes/userRoute")
 app.use(cookieParser());
